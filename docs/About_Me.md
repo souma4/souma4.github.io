@@ -1,13 +1,13 @@
-# Hello all!
+layout: page
+title: "About ME"
+permalink: /About_Me
 
-- I am Jeffrey Chandler and I'm currently a Masters student at University of Montana studying Systems Ecology.
-- I would say I'm a quantitative landscape ecologist that want's to bridge the gaps between forestry, wildlife biology, and disturbance ecology.
-- I'm particularly interested in leveraging the full gambit of statistical concepts to analyze ecological relationships over space, notably quasi novel non-parametric methods, ensemble models, and simulation models.
-- Currently I'm working on a project that quantifies "holistic" fire-regime departure across western US forested landscapes, and I hope to translate it into broader questions concering the influence of fire exclusion on fire-regime departures and how biodiversity may respond.
+# About Me
 
-# Skills
-
-- I am a proficient programmer in R, Python, and Julia, particularly in spatial analysis, modeling, simulation, and statistics. GitHub page is at [this link](https://github.com/souma4)
-- I leverage open source software to the fullest extent.
-- Have dabbled in numerous other interfaces such as C, C++, javascript (particularly Google Earth Engine), and ArcGIS (begrudgingly).
-- I am also a proficient teacher's assistant/tutor, having been one for 6 different courses.
+I'm Jeffrey Chandler. I'm a quantitative landscape ecologist that focuses on how
+landscape processes, mostly fire, affects the landscape ecosystem. I am a proficient coder,
+coding in R, Julia, Python, and sometimes in C. I don't publish everything to GitHub but
+you can see some of my projects at [this location](https://github.com/souma4).
+I also love teaching, having been a teachers assistant for 6 classes, and I have developed my own evidence-based
+style for helping and informing students, particularly thsoe that are struggling to grasp concepts. Everyone has the capability to succeed,
+it's just a matter of adapting to help foster that.

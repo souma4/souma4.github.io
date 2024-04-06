@@ -5,10 +5,10 @@ button {
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
-  padding: 20px;
-  font-size: clamp(8px, 32px, 40px);
+  padding: clamp(1px, 5vw, 20px);
+  font-size: clamp(8px, 2vw, 40px);
   font-family: Arial, sans-serif;
-  margin: clamp(0.3em, 0.7em, 1em);
+  margin: 1.3vw;
 }
 
 button:hover {

@@ -4,6 +4,8 @@ body {
 
 button {
   background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
 }
 
 button:hover {

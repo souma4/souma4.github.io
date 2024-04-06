@@ -1,1 +1,41 @@
-body { font-family: Arial, sans-serif; }
+body {
+  font-family: Arial, sans-serif;
+}
+button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #dfdfdf;
+}
+.navbar {
+  background: radial-gradient(ellipse at center, #dcdcdc 0%, #a1a1a1 100%);
+  overflow: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px 0;
+}

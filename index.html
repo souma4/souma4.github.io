@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <style>
-      .navbar {
-        background: radial-gradient(
-          ellipse at center,
-          #dcdcdc 0%,
-          #a1a1a1 100%
-        );
-        overflow: auto;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .navbar ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-      }
-
-      .navbar li {
-        list-style: none;
-        margin: 0 10px;
-      }
-
-      .navbar li a {
-        display: block;
-        color: black;
-        text-align: center;
-        text-decoration: none;
-        padding: 15px 0;
-      }
-    </style>
-  </head>
+    <head>
+      <title>My Website</title>
+      
+      <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+      <header>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="./"><button>Homepage</button></a>
+            </li>
+            <li>
+              <a href="About_Me"><button>About</button></a>
+            </li>
+            <li>
+              <a href="Projects.html"><button>Projects</button></a>
+            </li>
+            <li>
+              <a href="Research.html"><button>Research</button></a>
+            </li>
+            <li>
+              <a href="Classes.html"><button>Classes</button></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
   <body>
-    <header>
-      <nav class="navbar">
+    <div class="rounded-square">
+      <h1>Jeffrey Chandler</h1>
+      <p>
+        Welcome to Jeffrey Chandler's website. If you want to learn more about
+        me, click the link below. If you want to see my projects, click the
+        projects link. If you want to see my research, click the research link.
+        I also include news at the bottom that links to the newest news for me.
+      </p>
+      <main>
+          <h2><a href="./About_Me">About Me</a></h2>
+    </div>
+      <div class="rounded-square">
+        <h3>News</h3>
         <ul>
-          <li><a href="./">Homepage</a></li>
-          <li><a href="./About_Me">About Me</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="Research.html">Research</a></li>
+          <!-- <li><a href="news1.html">News 1</a></li> -->
         </ul>
-      </nav>
-    </header>
+      </div>
+    </main>
   </body>
 </html>

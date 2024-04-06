@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./"><button>Homepage</button></a></li>
+          <li><a href="./About_Me"><button>About Me</button></a></li>
+          <li><a href="Projects.html"><button>Projects</button></a></li>
+          <li><a href="Research.html"><button>Research</button></a></li>
+          <li><a href="./classes"><button>Classes</button></a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+
+    <body>
+        <div class="sidebar">
+            <h3>Assignments</h3>
+            <ul>
+                <li> <a href = "./intro_R/intro_R_1"> Lesson 1: Installing R </a> </li>
+                <li> <a href = "./intro_R/intro_R_2"> Lesson 2: Fundamentals of Coding </a> </li>
+                <li> <a href = "./intro_R/intro_R_3"> Lesson 3: Fundamentals of R </a> </li>
+                <li> <a href = "./intro_R/intro_R_4"> Lesson 4: Basic data manipulation </a> </li>
+                <li> <a href = "./intro_R/intro_R_5"> Lesson 5: Basic statistics </a> </li>
+                <li> <a href = "./intro_R/intro_R_6"> Lesson 6: Basic data visualization </a> </li>
+              <!-- Add more assignments as needed -->
+            </ul>
+          </div>
+        
+        <ul>
+        <div class = "main-content">
+            <h1> Basic Data Manipulation </h1>
+            <h2> What is data manipulation?</h2>
+            <p> Data manipulation is the process of changing data to make it easier to read or to prepare it for analysis. </p>
+            <h2> Why is data manipulation important?</h2>
+            <p> Data manipulation is important because it allows you to clean and transform data so that it is in a format that is easier to work with.
+                Additionally,  it allows for quick, reliable, and transferable data analysis</p>
+            <h2> How to manipulate data in R</h2>
+            <p> In R, there are several packages that can be used to manipulate data. Some of the most common packages include dplyr, tidyr, and data.table. 
+                These packages allow you to filter, sort, group, and summarize data. </p>
+                <p> we will use "tidyverse" which loads a suite of useful data wrangling packages, such as dplyr and tidyr</p>
+                <p> To install the tidyverse package, you will need to run the following code in RStudio: </p>
+                <div class = "code-block">
+                    install.packages("tidyverse") <br>
+                    library(tidyverse)
+                </div>
+                <p> Once you have installed the tidyverse package, you can use the functions in the package to manipulate data. </p>
+
+            <h2> How to manipulate data </h2>
+           <h3> Data classes </h3> 
+           <p> In the last lesson we learned multiple data classes, such as vectors, briefly.</p>
+              <p> In R, there are several data types that you will encounter when working with data. Some of the most common data types include: </p>
+                <ul>
+                    <li> Vectors: A vector is a one-dimensional array that can hold numeric, character, or logical data. </li>
+                    <li> Matrices: A matrix is a two-dimensional array that can hold numeric, character, or logical data. </li>
+                    <li> Data frames: A data frame is a two-dimensional array that can hold numeric, character, or logical data. </li>
+                    <li> Lists: A list is a collection of objects that can hold numeric, character, or logical data. </li>
+                </ul>
+                <p> In R, you can use the str() function to determine the data type of an object. </p>
+                <p> For example, if you have a data frame, you can use the following code to determine the data type of the object. We will use the Iris dataset for shared shared standard dataset: </p>
+                <div class = "code-block">
+                    class(iris) <br>
+                    # [1] "data.frame"
+                    </div>
+                    <p> In this example, the class() function returns "data.frame", which indicates that the object is a data frame. </p>
+                    <p>We can index this dataframe with the methods discussed last lesson,
+                        but we can also use the dplyr package to manipulate the data. </p>
+                        <p> For example, you can use the filter() function to filter rows based on a condition and select() which selects a column. </p>
+                        <p> Let's see what this looks like in code</p>
+                        <div class = "code-block">
+                            iris %>%<br> 
+                            filter(Species == "setosa") %>%<br>
+                             select(Sepal.Length, Sepal.Width) %>%<br>
+                                head()
+                        </div>
+                        This code takes iris, filters the rows where the species is setosa, selects the Sepal.Length and Sepal.Width columns, and then displays the first few rows of the resulting data frame. </p>
+                        <p> %>% is the "pipe" function, which pipes the object preceding into the first argument of the following function. An alternative pipe is |> </p>
+                        <p> an example of pipe</p>
+                        <div class = "code-block">
+                            2 %>%<br>
+                            sqrt()<br>
+                            $ [1] 1.414214
+                        </div>
+                        <p> This code takes 2, pipes it into the sqrt() function, and then returns the square root of 2. </p>
+                        <p> This is a basic example of data manipulation in R. There are many other functions that you can use to manipulate data, and I encourage you to explore the dplyr and tidyr packages to learn more. </p>
+                        <p> Another important function is mutate().
+                            mutate() allows you to create new columns based on existing columns. </p>
+                            <p> For example, you can use the following code to create a new column called "Petal.Ratio" that is the ratio of Petal.Length to Petal.Width: </p>
+                            <div class = "code-block">
+                                iris %>%<br>
+                                mutate(Petal.Ratio = Petal.Length / Petal.Width) %>%<br>
+                                head()
+                            </div>
+                            <p> This code creates a new column called "Petal.Ratio" that is the ratio of Petal.Length to Petal.Width and then displays the first few rows of the resulting data frame. </p>
+                            <h2> Split-Apply-Combine</h2>
+                            <p> The split-apply-combine strategy is a common data manipulation strategy that involves splitting the data into groups, applying a function to each group, and then combining the results. </p>
+                            <p> In R, you can use the group_by() and summarize() functions to implement the split-apply-combine strategy. </p>
+                            <p> For example, you can use the following code to calculate the mean Sepal.Length for each species in the Iris dataset: </p>
+                            <div class = "code-block">
+                                iris %>%<br>
+                                group_by(Species) %>%<br>
+                                summarize(mean(Sepal.Length))
+                            </div>
+                            <p> This code groups the data by the Species column, calculates the mean Sepal.Length for each group, and then displays the results. </p>
+                            <p> This is a basic example of the split-apply-combine strategy in R. There are many other functions that you can use to implement this strategy, and I encourage you to explore the dplyr and tidyr packages to learn more. </p>
+                            <h2> Pivot_longer</h2>
+                            <p> The pivot_longer() function is a useful function for reshaping data from wide to long format, which long format makes analysis very easy. </p>
+                            <p> For example, you can use the following code to reshape the Iris dataset from wide to long format: </p>
+                            <div class = "code-block">
+                                iris %>%<br>
+                                pivot_longer(cols = c(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width), names_to = "Measurement", values_to = "Value") %>%<br>
+                                head()
+                            </div>
+                            <p> This code reshapes the Iris dataset from wide to long format, where the columns Sepal.Length, Sepal.Width, Petal.Length, and Petal.Width are reshaped into two columns: Measurement and Value. </p>
+                            <p> This shape enables you to group by the measurement type, which could be useful for building relationships
+                                between the variables. </p>
+                            </p>
+                            <p> This is a basic example of reshaping data in R. There are many other functions that you can use to reshape data, and I encourage you to explore the tidyr package to learn more. </p>
+
+                            <h2> Conclusion</h2>
+                            <p> In this lesson, we learned what data manipulation is, why it is important, and how to manipulate data in R. We also learned about the split-apply-combine strategy and the pivot_longer() function. </p>
+                            <h3> Resources </h3>
+                            <p> Here are some resources to help you learn more about data manipulation in R: </p>
+                            <ul>
+                                <li> <a href = "https://www.bigbookofr.com/data-databases-and-engineering#data-management-in-large-scale-education-research" > Big Book of R: Data, Databases and Engineering </a> </li>
+                                <li> <a href = "https://dplyr.tidyverse.org/"> dplyr package </a> </li>
+                                <li> <a href = "https://tidyr.tidyverse.org/"> tidyr package </a> </li>
+                                <li> <a href = "https://www.rdocumentation.org/packages/data.table/versions/1.14.0"> data.table package</a> , a harder, but more efficient data manipulation tool </li>
+                            </ul>
+                        </p>
+
+                    </p>
+                    
+
+
+
+        </div> 
+        <div class = "rounded-square">
+            <h3>Link to the fifth lesson</h3>
+            <ul>
+                <li> <a href = "./intro_R/intro_R_5"> Lesson 5: Basic Statistics </a> </li>
+            </ul>
+    </body>
+</html>

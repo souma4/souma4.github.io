@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./"><button>Homepage</button></a></li>
+          <li><a href="./About_Me"><button>About Me</button></a></li>
+          <li><a href="Projects.html"><button>Projects</button></a></li>
+          <li><a href="Research.html"><button>Research</button></a></li>
+          <li><a href="./classes"><button>Classes</button></a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+
+    <body>
+        <div class="sidebar">
+            <h3>Assignments</h3>
+            <ul>
+                <li> <a href = "./intro_R/intro_R_1"> Lesson 1: Installing R </a> </li>
+                <li> <a href = "./intro_R/intro_R_2"> Lesson 2: Fundamentals of Coding </a> </li>
+                <li> <a href = "./intro_R/intro_R_3"> Lesson 3: Fundamentals of R </a> </li>
+                <li> <a href = "./intro_R/intro_R_4"> Lesson 4: Basic data manipulation </a> </li>
+                <li> <a href = "./intro_R/intro_R_5"> Lesson 5: Basic statistics </a> </li>
+                <li> <a href = "./intro_R/intro_R_6"> Lesson 6: Basic data visualization </a> </li>
+              <!-- Add more assignments as needed -->
+            </ul>
+          </div>
+          <ul>
+            <div class = "main-content">
+                <h1> Basic Statistics in R</h1>
+                <h2> What is statistics?</h2>
+                <p> Statistics is the science of collecting, analyzing, and interpreting data. It is used to make informed decisions in a wide range of fields, including business, science, and social sciences. Statistics can help us understand the world around us by providing insights into patterns and relationships in data. </p>
+                <h2> Why is statistics important?</h2>
+                <p> Statistics is important because it allows us to make sense of data and draw meaningful conclusions from it. By analyzing data statistically, we can identify trends, patterns, and relationships that may not be immediately apparent. Statistics also helps us make informed decisions by providing evidence to support our conclusions. </p>
+                <h2> How is statistics used in R?</h2>
+                <p> R is a powerful tool for statistical analysis and data visualization. It has a wide range of built-in functions and packages that make it easy to perform statistical tests, create visualizations, and analyze data. Some of the most commonly used statistical functions in R include mean(), median(), sd(), and cor(). R also has packages like ggplot2 and plotly that make it easy to create visualizations of data. </p>
+                <h2> Examples</h2>
+                <p> Here are some examples of basic statistics in R: </p>
+                <ul>
+                    <li> Calculating the mean of a vector: mean(c(1, 2, 3, 4, 5)) </li>
+                    <li> Calculating the median of a vector: median(c(1, 2, 3, 4, 5)) </li>
+                    <li> Calculating the standard deviation of a vector: sd(c(1, 2, 3, 4, 5)) </li>
+                    <li> Calculating the correlation between two vectors: cor(c(1, 2, 3, 4, 5), c(5, 4, 3, 2, 1)) </li>
+                </ul>
+                <h3> Tidy Statistics</h3>
+                <p> Tidy statistics is a concept that emphasizes the importance of organizing data in a tidy format before performing statistical analysis. Tidy data is data that is organized in a consistent format, with each variable in a separate column and each observation in a separate row. By organizing data in a tidy format, we can make it easier to perform statistical analysis and create visualizations.
+                 </p>
+                 <p> We already covered tidy data, but lets emphasize split-apply-combine</p>
+                    <h3> Split-Apply-Combine</h3>
+                    <p> Split-apply-combine is a strategy for data analysis that involves three steps: splitting the data into groups, applying a function to each group, and combining the results. This strategy is commonly used in R to perform statistical analysis on grouped data. The dplyr package in R provides functions like group_by() and summarize() that make it easy to implement the split-apply-combine strategy. </p>
+                    <h4> Example </h4>
+                    <p> Here is an example of how split-apply-combine works in R: </p>
+                    <ul>
+                        <li> Split the data into groups based on a variable: data %>% group_by(variable) </li>
+                        <li> Apply a function to each group: data %>% group_by(variable) %>% summarize(mean = mean(value)) </li>
+                        <li> Combine the results: data %>% group_by(variable) %>% summarize(mean = mean(value)) </li>
+                    </ul>
+                    <h2> Modeling </h2>
+                    <p> Modeling is the process of creating a mathematical representation of a real-world process. In statistics, modeling is used to make predictions, estimate parameters, and test hypotheses. R has a wide range of functions and packages that make it easy to create models and perform statistical analysis. Some of the most commonly used modeling functions in R include lm(), glm(), and nls(). </p>
+                    <h3> Example </h3>
+                    <p> Here is an example of how to create a linear regression model in R using a standard dataset: </p>
+                    <div class = "code-block">
+                        <p> # Load the dataset </p>
+                        <p> data(mtcars) </p>
+                        <p> # Create a linear regression model </p>
+                        <p> model <- lm(mpg ~ wt, data = mtcars) </p>
+                        <p> # Print the model summary </p>
+                        <p> summary(model) </p>
+                        <p> # Plot the relationship </p>
+                        <p> plot(mpg ~ wt, data = mtcars) </p>
+                        <p> abline(model) </p>
+                    </div>
+                    <p> As we can see, we built a relationship between vehicle weight and 
+                        miles per gallon. </p>
+                        <p> With this, we could understand the coefficients of the model with summary() and then plot the relationship</p>
+
+                    </p>
+                                <h2> Conclusion</h2>
+                                <p> In this lesson, we learned what statistics is, why it is important, and how to perform basic statistics in R. We also learned about tidy statistics, the split-apply-combine strategy, and modeling in R.
+                                </p>
+                                <p> Remember that R is exceptionally powerful in statistics, and will likely already have statistical methods, of any kind, implemented</p>
+                                <p> If you are interested in learning more about statistics in R, I recommend checking out the following resources: </p>
+                                <h3> Resources </h3>
+                                <p> Here are some resources to help you learn more about data manipulation in R: </p>
+                                <ul>
+                                    <li> <a href = "https://www.bigbookofr.com/statistics"> 
+                                        The Big Book of R: statistics </a> </li>
+                                    <li> <a href = "https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/statistics">
+                                        R documentation: statistics </a> </li>
+                                    <li> <a href = "https://www.r-bloggers.com/2020/01/10-r-packages-to-help-you-learn-statistics/">
+                                        R bloggers: 10 R packages to help you learn statistics </a> </li>
+                                    </a></li>
+                                </ul>
+                            </p>
+    
+                        </p>
+                        
+    
+    
+    
+            </div> 
+            <div class = "rounded-square">
+                <h3>Link to the Sixth lesson</h3>
+                <ul>
+                    <li> <a href = "./intro_R/intro_R_6"> Lesson 6: Basic data visualization </a> </li>
+                </ul>
+        </body>
+    </html>
+    

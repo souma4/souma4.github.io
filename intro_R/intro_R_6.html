@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./"><button>Homepage</button></a></li>
+          <li><a href="./About_Me"><button>About Me</button></a></li>
+          <li><a href="Projects.html"><button>Projects</button></a></li>
+          <li><a href="Research.html"><button>Research</button></a></li>
+          <li><a href="./classes"><button>Classes</button></a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+
+    <body>
+        <div class="sidebar">
+            <h3>Assignments</h3>
+            <ul>
+                <li> <a href = "./intro_R/intro_R_1"> Lesson 1: Installing R </a> </li>
+                <li> <a href = "./intro_R/intro_R_2"> Lesson 2: Fundamentals of Coding </a> </li>
+                <li> <a href = "./intro_R/intro_R_3"> Lesson 3: Fundamentals of R </a> </li>
+                <li> <a href = "./intro_R/intro_R_4"> Lesson 4: Basic data manipulation </a> </li>
+                <li> <a href = "./intro_R/intro_R_5"> Lesson 5: Basic statistics </a> </li>
+                <li> <a href = "./intro_R/intro_R_6"> Lesson 6: Basic data visualization </a> </li>
+              <!-- Add more assignments as needed -->
+            </ul>
+          </div>
+          <ul>
+            <div class = "main-content">
+                <h1> Basic Data Visualization</h1>
+                <h2> What is data visualization?</h2>
+                <p> Data visualization is the graphical representation of data. It uses visual elements like charts, graphs, and maps to help us understand and interpret data. Data visualization is an important tool for exploring and communicating data, as it can help us identify patterns, trends, and relationships in the data. </p>
+                <h2> Why is data visualization important?</h2>
+                <p> Data visualization is important because it allows us to see and understand data in a visual format. By creating visualizations of data, we can identify patterns and trends that may not be immediately apparent from the raw data. Data visualization can also help us communicate our findings to others in a clear and concise way. </p>
+                <h2> How is data visualization used in R?</h2>
+                <p> R is a powerful tool for data visualization, with a wide range of packages and functions that make it easy to create informative and visually appealing visualizations. Some of the most commonly used data visualization packages in R include ggplot2, plotly, and lattice. These packages provide a wide range of functions for creating different types of plots, such as scatter plots, bar plots, and line plots. </p>
+                <h2> Examples</h2>
+                <p> Here are some examples of basic data visualization in R using ggplot 2: </p>
+                <div class = "code-block">
+                    library(ggplot2)
+                    iris_plot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + <br>
+                        geom_point() + <br>
+                        labs(title = "Iris Dataset", x = "Sepal Length", y = "Sepal Width") <br>
+                    print(iris_plot)
+                </div>
+                <p> In this example, we are creating a scatter plot of the iris dataset, 
+                    with Sepal Length on the x-axis, Sepal Width on
+                     the y-axis, and different colors for each species of
+                      iris. </p>
+                      <p> The first argument is a dataset, aes() signifies the "aesthetics" for the plot.
+                        geom_point()+ is the type of plot we are creating, in this case a scatter plot.
+                        labs() is used to add a title and axis labels to the plot.
+                        print() is used to display the plot. </p>
+                        For a list of all the ggplot2 functions, visit <a href = "https://ggplot2.tidyverse.org/reference/"> ggplot2 reference </a>
+                        and for a cheatsheet of the functions visit <a href = "https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf"> ggplot2 cheatsheet </a>
+                        <h2> Interactive Plots</h2>
+                        <p> R also has packages that allow you to create interactive plots, such as plotly. Interactive plots allow you to explore the data by zooming in, panning, and hovering over data points to see more information. Plotly is a popular package for creating interactive plots in R, and it provides a wide range of functions for creating interactive plots. </p>
+                        <h2> Examples</h2>
+                        <p> Here are some examples of interactive plots in R using plotly: </p>
+                        <div class = "code-block">
+                            library(plotly) <br>
+                            iris_plot <- plot_ly(iris, x = ~Sepal.Length, y = ~Sepal.Width, color = ~Species, type = "scatter", mode = "markers") %>% <br>
+                                layout(title = "Iris Dataset", xaxis = list(title = "Sepal Length"), yaxis = list(title = "Sepal Width")) <br>
+                            iris_plot
+                        </div>
+                        <p> In this example, we are creating an interactive scatter plot of the iris dataset using plotly. 
+                            We are specifying the x and y variables, the color variable, and the type of plot (scatter). 
+                            We are also adding a title and axis labels to the plot using the layout() function. </p>
+                            <p> For a list of all the plotly functions, visit <a href = "https://plotly.com/r/reference/"> plotly reference </a>
+                                and for a cheatsheet of the functions visit <a href = "https://images.plot.ly/plotly-documentation/images/r_cheat_sheet.pdf"> plotly cheatsheet </a> </p>
+                                <h2> Conclusion</h2>
+                                <p> In this lesson, we learned about the basics of data visualization in R. We covered some of the most commonly used data visualization packages in R, including ggplot2 and plotly. We also learned how to create different types of plots, such as scatter plots, bar plots, and line plots. Data visualization is an important tool for exploring and communicating data, and R provides a wide range of tools to help you create informative and visually appealing visualizations. </p>
+                                <h3> Resources </h3>
+                                <p> Here are some resources to help you learn more about data manipulation in R: </p>
+                                <ul>
+                                    <li> <a href = "https://www.bigbookofr.com/data-visualization" > Big book of R: Data Visualization </a> </li>
+                                    <li> <a href = "http://www.sthda.com/english/wiki/ggplot2-essentials://tidyr.tidyverse.org/" > STHDA: ggplot2-essentials </a> </li>
+                                  
+                                </ul>
+                            </p>
+
+                      </p>
+
+    
+    
+    
+            </div> 
+            <div class = "rounded-square">
+                <h3>Link to the Classes for a new class</h3>
+                <ul>
+                    <li> <a href = "./classes"> Classes </a> </li>
+                </ul>
+        </body>
+    </html>
+    

@@ -6,9 +6,9 @@ button {
   border: none;
   border-radius: 10px;
   padding: 20px;
-  font-size: 32px;
+  font-size: clamp(8px, 32px, 40px);
   font-family: Arial, sans-serif;
-  margin: 0.7em;
+  margin: clamp(0.3em, 0.7em, 1em);
 }
 
 button:hover {
@@ -98,4 +98,19 @@ button:hover {
   border-top: 4px solid #222222;
   background: #ffffff;
   text-align: center;
+}
+.projects li {
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+  border-bottom: 4px solid #222222;
+  border-top: 4px solid #222222;
+  background: #ffffff;
+  text-align: left;
+  font-size: 18px;
+}
+.projects li a {
+  color: blue;
+  text-decoration: none;
+  font-size: 20px;
 }

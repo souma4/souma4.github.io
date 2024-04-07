@@ -114,3 +114,18 @@ button:hover {
   text-decoration: none;
   font-size: 20px;
 }
+
+.box {
+  display: flex;
+  align-items: center;
+  margin-left: 10%; /* Change margin-right to margin-left */
+  margin-top: 10px; /* Add margin-top */
+  width: 30%;
+  float: left; /* Change float to left */
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

@@ -119,10 +119,14 @@ button:hover {
 }
 .projects li a {
   color: #266577;
-  text-decoration: none;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 0);
   font-size: 20px;
+  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
 }
-
+.projects li a:hover {
+  text-decoration-color: #266577;
+  text-underline-offset: 0.1em;
+}
 .box {
   display: flex;
   align-items: center;

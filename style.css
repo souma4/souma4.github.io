@@ -167,3 +167,56 @@ button:hover {
 .main-text ul li {
   size: 16px;
 }
+
+.breadcrumbs {
+  clear: both;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+    "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  -webkit-animation: intro 0.3s both;
+  animation: intro 0.3s both;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.breadcrumbs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@media (min-width: 80em) {
+  .breadcrumbs {
+    max-width: 1280px;
+  }
+}
+
+.breadcrumbs ol {
+  padding: 0;
+  list-style: none;
+  font-size: 0.75em;
+}
+
+@media (min-width: 64em) {
+  .breadcrumbs ol {
+    float: right;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (min-width: 80em) {
+  .breadcrumbs ol {
+    width: calc(100% - 300px);
+  }
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+
+.breadcrumbs .current {
+  font-weight: bold;
+}

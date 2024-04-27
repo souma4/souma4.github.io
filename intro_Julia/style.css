@@ -59,7 +59,7 @@ button:hover {
 
 .rounded-square {
   border: 2px solid #a1a1a1;
-  background: #dcdcdc;
+  background: #f1f1f1;
   border-radius: 25px;
   padding: 20px;
   margin: 10px;
@@ -131,4 +131,58 @@ a {
   border-radius: 0px;
   padding: 10px;
   margin: 10px;
+}
+
+.breadcrumbs {
+  clear: both;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+    "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  -webkit-animation: intro 0.3s both;
+  animation: intro 0.3s both;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  font-size: 32px;
+}
+
+.breadcrumbs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@media (min-width: 80em) {
+  .breadcrumbs {
+    max-width: 1280px;
+  }
+}
+
+.breadcrumbs ol {
+  padding: 0;
+  list-style: none;
+  font-size: 0.75em;
+}
+
+@media (min-width: 64em) {
+  .breadcrumbs ol {
+    float: right;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (min-width: 80em) {
+  .breadcrumbs ol {
+    width: calc(100% - 300px);
+  }
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+
+.breadcrumbs .current {
+  font-weight: bold;
 }

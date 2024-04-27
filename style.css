@@ -169,17 +169,9 @@ button:hover {
 }
 
 .breadcrumbs {
-  clear: both;
-  margin: 0 auto;
-  max-width: 100%;
+  margin: 1 left;
   padding-left: 1em;
   padding-right: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-    "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  -webkit-animation: intro 0.3s both;
-  animation: intro 0.3s both;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
 }
 
 .breadcrumbs::after {
@@ -214,7 +206,8 @@ button:hover {
 }
 
 .breadcrumbs li {
-  display: inline;
+  display: inline-block;
+  direction: ltr;
 }
 
 .breadcrumbs .current {

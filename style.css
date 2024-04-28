@@ -159,9 +159,16 @@ button:hover {
 }
 
 .error a {
-  color: blue;
-  text-decoration: none;
+  color: #266577;
+  font-weight: bold;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 0);
   font-size: 20px;
+  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+}
+
+.error a:hover {
+  text-decoration-color: #266577;
+  text-underline-offset: 0.1em;
 }
 
 .main-text ul li {

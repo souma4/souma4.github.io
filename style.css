@@ -161,8 +161,8 @@ button:hover {
 .error a {
   color: #266577;
   font-weight: bold;
+  font-size: 30px;
   text-decoration: underline 0.1em rgba(0, 0, 0, 0);
-  font-size: 20px;
   transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
 }
 
